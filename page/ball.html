@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+		<style>
+			body {
+				-webkit-perspective: 5000;
+			}
+
+			.round {
+				position: relative;
+				width: 400px;
+				height: 400px;
+				margin: 50px auto;
+			}
+
+			.round div {
+				position: absolute;
+				width: 400px;
+				height: 400px;
+				margin: 0 auto;
+				border-radius: 50%;
+				-webkit-transform-style: preserve-3d;
+				-moz-transform-style: preserve-3d;
+				transform-style: preserve-3d;
+
+			}
+
+			.round div:nth-child(1) {
+				box-shadow: inset 10px 50px 80px rgba(255, 0, 0, 0.5);
+				-webkit-animation: change 7s linear infinite;
+			}
+
+			.round div:nth-child(2) {
+				box-shadow: inset 10px 50px 80px rgba(0, 0, 255, 0.5);
+				-webkit-animation: change 4s linear infinite;
+			}
+
+			.round div:nth-child(3) {
+				box-shadow: inset 10px 50px 80px rgba(0, 255, 0, 0.5);
+				-webkit-animation: change 5s linear infinite;
+			}
+
+			.round div:nth-child(4) {
+				box-shadow: inset 10px 50px 80px rgba(0, 175, 0, 0.5);
+				-webkit-animation: change 6s linear infinite;
+			}
+
+			.round div:nth-child(5) {
+				box-shadow: inset 10px 50px 80px rgba(0, 0, 175, 0.5);
+				-webkit-animation: change 7s linear infinite;
+			}
+
+			@-webkit-keyframes change {
+				0%{
+					-webkit-transform: rotate(0deg);
+				}
+				50%{
+					-webkit-transform: rotate(60deg);
+				}
+				100%{
+					-webkit-transform: rotate(0deg);
+				}
+				/*from {*/
+				/*	-webkit-transform: rotate(0deg);*/
+				/*}*/
+				/*to {*/
+				/*	-webkit-transform: rotate(60deg);*/
+				/*}*/
+			}
+
+			.round span:nth-child(6) {
+				display: block;
+				line-height: 400px;
+				font-size: 42px;
+				font-weight: bold;
+				text-align: center;
+				-webkit-animation: change2 5s linear infinite;
+			}
+
+			@-webkit-keyframes change2 {
+				0% {
+					color: rgba(0, 0, 0, 1);
+				}
+				10% {
+					color: rgba(0, 0, 255, 0.5);
+				}
+				20% {
+					color: rgba(0, 255, 255, 1);
+				}
+				30% {
+					color: rgba(175, 255, 0, 0.5);
+				}
+				40% {
+					color: rgba(255, 175, 255, 1);
+				}
+				50% {
+					color: rgba(255, 0, 255, 0.5);
+				}
+				60% {
+					color: rgba(175, 0, 175, 1);
+				}
+				70% {
+					color: rgba(0, 175, 255, 0.5);
+				}
+				80% {
+					color: rgba(255, 175, 175, 1);
+				}
+				90% {
+					color: rgba(175, 175, 255, 0.5);
+				}
+				100% {
+					color: rgba(0, 0, 0, 1);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class='round'>
+			<div></div>
+<!--			<div></div>-->
+<!--			<div></div>-->
+<!--			<div></div>-->
+<!--			<div></div>-->
+<!--			<span>loading...</span>-->
+		</div>
+	</body>
+</html>

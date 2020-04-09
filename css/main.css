@@ -1,0 +1,202 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #060c21;
+}
+
+.bg{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.ball {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #FCF9F0;
+    transition:all 3s;
+    /*animation: change 5s infinite, ballShine 5s infinite;*/
+    /*zoom: 0.2;*/
+}
+
+.ballInner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #FCF9F0;
+    animation: change 5s infinite, ballShine 5s infinite;
+    /*opacity: 0;*/
+}
+
+.centerBallInner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #FCF9F0;
+    animation: ballShine 5s infinite;
+}
+
+.ball:hover{
+    transform-origin: 50% 50% 0;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+}
+
+.score{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.score:hover{
+    opacity: 1;
+}
+
+.stretched-link::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: auto;
+    cursor:pointer;
+    content: "";
+    background-color: rgba(0, 0, 0, 0)
+}
+
+.sourceHTML{
+    width: 40%;
+    height: 60%;
+    animation: shakeHead 4s infinite;
+    border: 0;
+}
+
+.btnGroups{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    padding: 4px;
+}
+
+.yesBtn{
+    text-align: center;
+    border-radius: 10%;
+    background-color: #05A9E4;
+    padding: 4px;
+    margin: 5px;
+    cursor:pointer;
+}
+.yesBtn:hover{
+    background-color: #2F63AD;
+}
+
+.exitBtn{
+    text-align: center;
+    border-radius: 10%;
+    background-color: #F31E23;
+    padding: 4px;
+    margin: 5px;
+    cursor:pointer;
+}
+
+.exitBtn:hover{
+    background-color: #9C0404;
+}
+
+@keyframes change {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(30deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes ballShine {
+    0% {
+        box-shadow: 0 0 100px 12px #fff, inset 12.5px -12.5px 80px #fdff17;
+    }
+    50% {
+        box-shadow: 0 0 100px 12px #ff6633, inset 12.5px -12.5px 80px #fdff17;
+    }
+    100% {
+        box-shadow: 0 0 100px 12px #fff, inset 12.5px -12.5px 80px #fdff17;
+    }
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 0.1;
+    }
+    20%{
+        opacity: 0.2;
+    }
+    30%{
+        opacity: 0.3;
+    }
+    40%{
+        opacity: 0.4;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    60%{
+        opacity: 0.6;
+    }
+    70%{
+        opacity: 0.7;
+    }
+    80%{
+        opacity: 0.8;
+    }
+    90%{
+        opacity: 0.9;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes shakeHead {
+    0%{
+        transform: translate(0,0);
+    }
+    50%{
+        transform: translate(0,20px);
+    }
+}
