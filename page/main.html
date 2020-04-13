@@ -2,13 +2,99 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Title</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="../css/main.css">
+
+		<title>Title</title>
 	</head>
 	<body>
-<!--		<div class="ball">-->
-<!--			<div class="ballInner"><div class="score">PG12138<a class="stretched-link" href="ball.html"></a></div></div>-->
-<!--		</div>-->
+		<header id="header" class="bg-light">
+			<nav class="navbar navbar-expand-md">
+				<a class="navbar-brand font-weight-bold text-dark">Memories</a>
+				<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarContent"
+						aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+				</button>
+				<div class="collapse navbar-collapse" id="navbarContent">
+					<ul class="navbar-nav mr-5">
+						<li class="nav-item">
+							<a class="nav-link" href="main.html">首页</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link" href="mall.html">我的记忆</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="cart.html">探索</a>
+						</li>
+					</ul>
+					<form id="searchForm" class="form-inline ml-2 my-lg-0 ml-auto" onsubmit="search();return false;">
+						<input id="searchText" class="form-control mr-sm-2" type="search" placeholder="Search">
+						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜寻记忆</button>
+					</form>
+
+					<div class="mx-lg-5 mx-md-0">
+						<a id="login" class="nav-link font-weight-bold" href="user.html">登录/注册</a>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<main class="container-fluid d-flex flex-row flex-grow-1">
+			<div class="d-flex flex-column justify-content-center align-content-center w-25 text-light font-italic">
+				每个星球里都有一道独特的记忆
+				<br>
+				find your own memory
+			</div>
+			<div id="main" class="w-75 h-100 main">
+				<div v-for="memory in memories"
+					 v-if="memory.seen"
+					 class="memory"
+					 :id="memory.id"
+					 :style="{
+						 zoom:memory.zoom,
+						 backgroundColor:memory.backgroundColor,
+						 left:memory.left,
+						 top:memory.top
+					 }"
+					 @click="clickMemory($event)"
+				>
+					<div class="memoryInner" :style="{animationDelay:memory.animationDelay}">
+						<div class="memoryID">
+							{{memory.id}}
+						</div>
+					</div>
+				</div>
+				<div id="bg"
+					 v-if="seen"
+					 class="background">
+					<div class="mainMemory">
+						<div class="memoryInner">
+							<div class="iframe">
+								<iframe
+										style="width: 100%;height: 100%;border: 0"
+										:src="iframeSrc"
+										@load="iframeLoad($event)">
+
+								</iframe>
+							</div>
+							<div class="btnGroup">
+								<div class="yesBtn" @click="yes()">查看记忆</div>
+								<div class="noBtn" @click="no()">继续探索</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
 	</body>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script rel="script" src="../bootstrap/js/jquery-3.2.1.min.js"></script>
+	<script rel="script" src="../bootstrap/js/popper.js"></script>
+	<script rel="script" src="../bootstrap/js/bootstrap.js"></script>
+	<script rel="script" src="../vue/vue.js"></script>
 	<script rel="script" src="../js/main.js"></script>
 </html>
