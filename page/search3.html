@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>搜索记忆</title>
+
+    <!-- Custom styles for this template -->
+    <link href="css/search.css" rel="stylesheet">
+    <!--vue support-->
+    <script src="vue/vue.js"></script>
+    <!--jquery support-->
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <!--link-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <!--import js-->
+    <script src="js/search.js"></script>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--
+    <header class="header black-bg">
+        <div ><b>REMEBER</b></div>
+    </header>-->
+    
+    <div class="topbar">
+        <ul class="topbar-left">
+            <li>REMEMBER</li>
+        </ul>
+        <ul class="topbar-right">
+            <li>me</li>
+        </ul>
+    </div>
+
+    <aside>
+        <div id="sidebar">
+            <p>侧边导航栏<br>主页<br>个人信息<br>我的记忆</p>
+        </div>
+    </aside>
+
+
+    <div class="select-content">
+        <div class="search">
+            <input type="text" placeholder="请输入..." name="" id="" value="" />
+            <button id="btnSearch"><i>搜索</i></button>
+        </div>
+
+        <!--
+    <div class="search-box">
+        <input class="search-txt" type="text" name="" placeholder="Type to search">
+        <a class="search-btn" href="#">
+            <i class="fas fa-search"></i>    
+        </a>
+    </div>
+    -->
+
+        <div id="select-result">
+            为您检索到<b id="resultNum"></b> 段记忆：
+        </div>
+
+        <div class="wrapper">
+            <div class="row mt">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4 mb">
+                            <div class="content-panel pn">
+                                <div id="memo-show">
+                                    <h3>记一件小事</h3>
+                                    <h6>5 min. ago</h6>
+                                </div>
+                                <div class="memo-show centered">
+                                    <p>查看记忆详情</p>
+                                </div>
+                                <div class="centered">
+                                    <h6><i class="fa fa-comment"></i> 18 | <i class="fa fa-heart"></i> 49</h6>
+                                </div>
+                            </div>
+                            <!-- /content-panel -->
+                        </div>
+                        <div class="col-md-4 col-sm-4 mb">
+                            <div class="content-panel pn">
+                                <div id="memo-show">
+                                    <h3>记一件小事</h3>
+                                    <h6>5 min. ago</h6>
+                                </div>
+                                <div class="memo-show centered">
+                                    <p>查看记忆详情</p>
+                                </div>
+                                <div class="centered">
+                                    <h6><i class="fa fa-comment"></i> 18 | <i class="fa fa-heart"></i> 49</h6>
+                                </div>
+                            </div>
+                            <!-- /content-panel -->
+                        </div>
+                        <div class="col-md-4 col-sm-4 mb">
+                            <div class="content-panel pn">
+                                <div id="memo-show">
+                                    <h3>记一件小事</h3>
+                                    <h6>5 min. ago</h6>
+                                </div>
+                                <div class="memo-show centered">
+                                    <p>查看记忆详情</p>
+                                </div>
+                                <div class="centered">
+                                    <h6><i class="fa fa-comment"></i> 18 | <i class="fa fa-heart"></i> 49</h6>
+                                </div>
+                            </div>
+                            <!-- /content-panel -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 mb">
+                            <div class="content-panel pn">
+                                <div id="memo-show">
+                                    <h3>记一件小事</h3>
+                                    <h6>5 min. ago</h6>
+                                </div>
+                                <div class="memo-show centered">
+                                    <p>查看记忆详情</p>
+                                </div>
+                                <div class="centered">
+                                    <h6><i class="fa fa-comment"></i> 18 | <i class="fa fa-heart"></i> 49</h6>
+                                </div>
+                            </div>
+                            <!-- /content-panel -->
+                        </div>
+                        <div class="col-md-4 col-sm-4 mb">
+                            <div class="content-panel pn">
+                                <div id="memo-show">
+                                    <h3>记一件小事</h3>
+                                    <h6>5 min. ago</h6>
+                                </div>
+                                <div class="memo-show centered">
+                                    <p>查看记忆详情</p>
+                                </div>
+                                <div class="centered">
+                                    <h6><i class="fa fa-comment"></i> 18 | <i class="fa fa-heart"></i> 49</h6>
+                                </div>
+                            </div>
+                            <!-- /content-panel -->
+                        </div>
+                        <div class="col-md-4 col-sm-4 mb">
+                            <div class="content-panel pn">
+                                <div id="memo-show">
+                                    <h3>记一件小事</h3>
+                                    <h6>5 min. ago</h6>
+                                </div>
+                                <div class="memo-show centered">
+                                    <p>查看记忆详情</p>
+                                </div>
+                                <div class="centered">
+                                    <h6><i class="fa fa-comment"></i> 18 | <i class="fa fa-heart"></i> 49</h6>
+                                </div>
+                            </div>
+                            <!-- /content-panel -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 mb">
+                            <div class="content-panel pn">
+                                <div id="memo-show">
+                                    <h3>记一件小事</h3>
+                                    <h6>5 min. ago</h6>
+                                </div>
+                                <div class="memo-show centered">
+                                    <p>查看记忆详情</p>
+                                </div>
+                                <div class="centered">
+                                    <h6><i class="fa fa-comment"></i> 18 | <i class="fa fa-heart"></i> 49</h6>
+                                </div>
+                            </div>
+                            <!-- /content-panel -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
