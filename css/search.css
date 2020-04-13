@@ -212,9 +212,9 @@ body{
 	margin-left: 10px;
 }
 
-/* Profile 01*/
+/* memo show*/
 #memo-show {
-	background: url(../resources/images/instagram.jpg) no-repeat center top;
+	background: url(../static/instagram.jpg) no-repeat center top;
 	margin-top: -15px;
 	background-attachment: relative;
 	background-position: center center;
