@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Remember</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="../static/favicon_03.ico">
+
+        <!-- Summernote css -->
+        <link href="../libs/summernote/summernote-bs4.css" rel="stylesheet" />
+
+        <!-- Icons css -->
+        <link href="../libs/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
+        <link href="../libs/dripicons/webfont/webfont.css" rel="stylesheet" type="text/css" />
+        <link href="../libs/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css" />
+
+        <!-- App css -->
+        <!-- build:css -->
+        <link href="../css/app.css" rel="stylesheet" type="text/css" />
+        <!-- endbuild -->
+
+    </head>
+
+    <body>
+
+        <!-- Navigation Bar-->
+        <header id="topnav">
+            <nav class="navbar-custom">
+
+                <div class="container-fluid">
+                    <ul class="list-unstyled topbar-right-menu float-right mb-0">
+
+                        <li class="dropdown notification-list">
+                            <!-- Mobile menu toggle-->
+                            <a class="navbar-toggle nav-link">
+                                <div class="lines">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </a>
+                            <!-- End mobile menu toggle-->
+                        </li>
+    
+                        <li class="dropdown notification-list">
+                            <a class="nav-link dropdown-toggle nav-user" data-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="false" aria-expanded="false">
+                                <img src="../static/users/avatar-1.jpg" alt="user" class="rounded-circle"> <span class="ml-1">Distant Memory<i class="mdi mdi-chevron-down"></i> </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated profile-dropdown ">
+                                <!-- item-->
+                                <div class="dropdown-item noti-title">
+                                    <h6 class="text-overflow m-0">Welcome !</h6>
+                                </div>
+    
+                                <!-- item-->
+                                <a href="personal-center.html" class="dropdown-item notify-item">
+                                    <i class="dripicons-user"></i> <span>My Account</span>
+                                </a>
+    
+                                <!-- item-->
+                                <a href="Settings.html" class="dropdown-item notify-item">
+                                    <i class="dripicons-help"></i> <span>Settings</span>
+                                </a>
+    
+                                <!-- item-->
+                                <a href="auth-lock-screen.html" class="dropdown-item notify-item">
+                                    <i class="dripicons-lock"></i> <span>Lock Screen</span>
+                                </a>
+    
+                                <!-- item-->
+                                <a href="auth-login.html" class="dropdown-item notify-item">
+                                    <i class="dripicons-power"></i> <span>Logout</span>
+                                </a>
+    
+                            </div>
+                        </li>
+                        <li class="dropdown notification-list">
+                            <a href="javascript:void(0);" class="nav-link right-bar-toggle">
+                                <i class="dripicons-gear noti-icon"></i>
+                            </a>
+                        </li>
+    
+                    </ul>
+    
+                    <ul class="list-inline menu-left mb-0">
+                        <li class="float-left">
+                            <a href="personal-center.html" class="logo">
+                                <span class="logo-lg">
+                                    <img src="../static/Remember-logo.png" alt="" height="45">
+                                </span>
+                            </a>
+                        </li>
+                        <li class="app-search">
+                            <form>
+                                <input type="text" placeholder="Search..." class="form-control">
+                                <button type="submit" class="sr-only"></button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+            <!-- end topbar-main -->
+
+            <div class="topbar-menu">
+                <div class="container-fluid">
+                    <div id="navigation">
+                        <!-- Navigation Menu-->
+                        <ul class="navigation-menu">
+
+                            <li class="has-submenu">
+                                <a href="#"><i class="mdi mdi-buffer"></i>Authentication</a>
+                                <ul class="submenu">
+                                    <li><a href="auth-login.html">Log In</a></li>
+                                    <li><a href="auth-register.html">Register</a></li>
+                                    <li><a href="auth-recoverpassword.html">Recover Password</a></li>
+                                    <li><a href="auth-lock-screen.html">Lock Screen</a></li>
+                                </ul>
+                            </li>
+							
+                            <li class="has-submenu">
+                                <a href="#"><i class="mdi mdi-email-outline"></i>Personal Center</a>
+                                <ul class="submenu">
+                                    <li><a href="personal-center.html">Account</a></li>
+                                    <li><a href="My-memory.html">My Memory</a></li>
+									<li><a href="Browsing-history.html">Browsing history</a></li>
+                                    <li><a href="Settings.html">Settings</a></li>
+                                </ul>
+                            </li>
+							
+                        </ul>
+                        <!-- End navigation menu -->
+
+                        <div class="clearfix"></div>
+                    </div> <!-- end #navigation -->
+                </div> <!-- end container -->
+            </div> <!-- end navbar-custom -->
+        </header>
+        <!-- End Navigation Bar-->
+
+
+        <div class="wrapper">
+            <div class="container-fluid">
+
+                <!-- Page title box -->
+                <div class="page-title-alt-bg"></div>
+                <div class="page-title-box">
+                    <ol class="breadcrumb float-right">
+                        <li class="breadcrumb-item"><a href="javascript:void(0);">Home Page</a></li>
+                        <li class="breadcrumb-item"><a href="javascript:void(0);">Personal Center</a></li>
+                        <li class="breadcrumb-item active">Browsing history</li>
+                    </ol>
+                    <h4 class="page-title">Browsing history</h4>
+                </div>
+                <!-- End page title box -->
+
+
+                <!-- Right Sidebar -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-box">
+                            <!-- Left sidebar -->
+                            <div class="inbox-leftbar">
+
+                                <div class="mail-list mt-4">
+                                    <a href="personal-center.html" class="list-group-item border-0"><i class="mdi mdi-inbox font-18 align-middle mr-2"></i>Account</a>
+                                    <a href="My-memory.html" class="list-group-item border-0"><i class="mdi mdi-star font-18 align-middle mr-2"></i>My Memory</a>
+                                    <a href="Browsing-history.html" class="list-group-item border-0 text-danger"><i class="mdi mdi-file-document-box font-18 align-middle mr-2"></i>Browsing history</a>
+									<a href="Settings.html" class="list-group-item border-0"><i class="mdi mdi-send font-18 align-middle mr-2"></i>Settings</a>
+                                </div>
+
+                            </div>
+                            <!-- End Left sidebar -->
+
+                            <div class="inbox-rightbar">
+
+                                <div class="text-right">
+										<button type="button" class="btn btn-primary btn-rounded w-md m-b-30">Edit</button>
+								</div>
+								
+								<div class="mt-4">
+									<h5>Today</h5>
+									
+									<hr/>
+									
+									<div class="media mb-4 mt-1">
+										<div class="media-body">
+                                            <h6 class="m-0">...</h6>
+                                        </div>
+									</div>
+									
+									<hr/>
+									
+									<h5>Yesterday</h5>
+									
+									<hr/>
+									
+									<div class="media mb-4 mt-1">
+										<div class="media-body">
+                                            <h6 class="m-0">...</h6>
+                                        </div>
+									</div>
+									
+									<hr/>
+									
+									<h5>Earlier this week</h5>
+									
+									<hr/>
+									
+									<div class="media mb-4 mt-1">
+										<div class="media-body">
+                                            <h6 class="m-0">...</h6>
+                                        </div>
+									</div>
+									
+									<hr/>
+									
+									<h5>Last month</h5>
+									
+									<hr/>
+									
+									<div class="media mb-4 mt-1">
+										<div class="media-body">
+                                            <h6 class="m-0">...</h6>
+                                        </div>
+									</div>
+									
+									<hr/>
+									
+									<h5>Earlier this year</h5>
+									
+									<hr/>
+									
+									<div class="media mb-4 mt-1">
+										<div class="media-body">
+                                            <h6 class="m-0">...</h6>
+                                        </div>
+									</div>
+									
+									<hr/>
+									
+									<h5>long time ago</h5>
+									
+									<hr/>
+									
+									<div class="media mb-4 mt-1">
+										<div class="media-body">
+                                            <h6 class="m-0">...</h6>
+                                        </div>
+									</div>
+
+                                </div> <!-- card-box -->
+
+                            </div> 
+                            <!-- end inbox-rightbar-->
+
+                            <div class="clearfix"></div>
+                        </div>
+
+                    </div> <!-- end Col -->
+
+                </div><!-- End row -->
+
+            </div> <!-- end container -->
+        </div>
+        <!-- end wrapper -->
+
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        Web程序设计-Remember
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
+
+
+        <!-- Right Sidebar -->
+        <div class="right-bar">
+            <div class="rightbar-title">
+                <a href="javascript:void(0);" class="right-bar-toggle float-right">
+                    <i class="dripicons-cross noti-icon"></i>
+                </a>
+                <h5 class="m-0">Settings</h5>
+            </div>
+            <div class="slimscroll-menu">
+                <!-- User box -->
+                <div class="user-box">
+                    <div class="user-img">
+                        <img src="../static/users/avatar-1.jpg" alt="user-img" title="Mat Helme" class="rounded-circle img-fluid">
+                        <a href="personal-center.html" class="user-edit"><i class="mdi mdi-pencil"></i></a>
+                    </div>
+                    
+                    <h5><a href="#">Distant Memory</a> </h5>
+                    <p class="text-muted mb-0"><small>amnesia</small></p>
+                </div>
+
+                <!-- Settings -->
+                <hr class="mt-0" />
+                <h5 class="pl-3">Basic Settings</h5>
+                <hr class="mb-0" />
+
+                <div class="p-3">
+                    <div class="checkbox checkbox-primary mb-2">
+                        <input id="checkbox1" type="checkbox" checked>
+                        <label for="checkbox1">
+                            Notifications
+                        </label>
+                    </div>
+                    <div class="checkbox checkbox-primary mb-2">
+                        <input id="checkbox2" type="checkbox" checked>
+                        <label for="checkbox2">
+                            API Access
+                        </label>
+                    </div>
+                    <div class="checkbox checkbox-primary mb-2">
+                        <input id="checkbox3" type="checkbox">
+                        <label for="checkbox3">
+                            Auto Updates
+                        </label>
+                    </div>
+                    <div class="checkbox checkbox-primary mb-2">
+                        <input id="checkbox4" type="checkbox" checked>
+                        <label for="checkbox4">
+                            Online Status
+                        </label>
+                    </div>
+                    <div class="checkbox checkbox-primary mb-0">
+                        <input id="checkbox5" type="checkbox" checked>
+                        <label for="checkbox5">
+                            Auto Payout
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Right-bar -->
+
+
+        <!-- jQuery  -->
+        <script src="../libs/jquery/jquery.min.js"></script>
+        <script src="../libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../libs/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+
+        <!--Summernote js-->
+        <script src="../libs/summernote/summernote-bs4.min.js"></script>
+
+        <!-- App js -->
+        <script src="../js/jquery.core.js"></script>
+        <script src="../js/jquery.app.js"></script>
+
+        <script>
+            jQuery(document).ready(function(){
+                $('.summernote').summernote({
+                    height: 180,                 // set editor height
+                    minHeight: null,             // set minimum height of editor
+                    maxHeight: null,             // set maximum height of editor
+                    focus: false                 // set focus to editable area after initializing summernote
+                });
+            });
+        </script>
+
+    </body>
+</html>
